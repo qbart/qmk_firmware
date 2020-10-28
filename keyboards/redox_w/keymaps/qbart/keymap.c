@@ -38,7 +38,7 @@ LT(_SYM, KC_QUOT),PL_A          ,PL_S    ,PL_D    ,PL_F    ,PL_G    ,TD(_LBRC), 
   //├────────────┼──────────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────────────┼────────┤
      KC_DQT      ,LCTL_T(PL_Z)  ,PL_X    ,PL_C    ,PL_V    ,PL_B    ,KC_DEL  ,KC_F5   ,        KC_CAPS ,KC_BSLS ,PL_N    ,PL_M    ,KC_COMM ,KC_DOT  ,RCTL_T(KC_SLSH) ,KC_MINUS ,
   //├────────────┼──────────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────────────┼────────┤
- LOPT_T(KC_DEL)  ,KC_EXLM       ,KC_PIPE ,KC_AMPR ,     KC_LSPO ,    KC_SPC  ,KC_ESC  ,        TD(_WIN),KC_ENT  ,    KC_RSPC ,     KC_DLR  ,KC_RALT, KC_LEAD        ,TO(_NAV)
+ LOPT_T(KC_DEL)  ,KC_EXLM       ,KC_PIPE ,KC_AMPR ,     KC_LSPO ,    KC_SPC  ,TD(_WIN),       KC_ESC   ,KC_ENT  ,    KC_RSPC ,     KC_DLR  ,KC_RALT, KC_LEAD        ,TO(_NAV)
   //└────────────┴──────────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────────────┴────────┘
   ),
 
