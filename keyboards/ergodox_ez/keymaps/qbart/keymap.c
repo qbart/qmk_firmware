@@ -1,21 +1,10 @@
-#include "config.h"
-#include QMK_KEYBOARD_H
+#include "qbart.h"
 
-enum {
-    L_BASE = 0,
-    L_SYM,
-    L_NAV,
-};
-
-enum {
-    _WIN,
+qk_tap_dance_action_t tap_dance_actions[] = {
+    [_WIN] = ACTION_TAP_DANCE_DOUBLE(KC_LGUI, LGUI(KC_TAB)),
 };
 
 // clang-format off
-qk_tap_dance_action_t tap_dance_actions[] = {
-  [_WIN]    = ACTION_TAP_DANCE_DOUBLE(KC_LGUI, LGUI(KC_TAB)),
-};
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [L_BASE] = LAYOUT_ergodox(
     // left hand ---------------------------------------------------------------------------------------------------
@@ -33,11 +22,11 @@ LT(L_SYM, KC_QUOT) ,KC_A           ,KC_S           ,KC_D           ,KC_F        
     KC_RCBR        ,KC_Y           ,KC_U           ,KC_I           ,KC_O           ,KC_P           ,KC_ASTR,
                     KC_H           ,KC_J           ,KC_K           ,KC_L           ,KC_SCLN        ,KC_EQL,
     KC_RBRC        ,KC_N           ,KC_M           ,KC_COMMA       ,KC_DOT         ,RCTL_T(KC_SLSH),KC_MINUS,
-                                    KC_RSPC        ,KC_DLR         ,KC_LEAD        ,KC_RALT        ,TO(L_NAV),
+                                    KC_RSPC        ,KC_DLR         ,OSL(L_ONE)     ,KC_RALT        ,TO(L_NAV),
     // right thumb -------------------------------------------------------------------------------------------------
     KC_CAPS,        KC_BSLS,
     XXXXXXX,
-    XXXXXXX,           KC_ESC,        KC_ENT
+    KX_CXX_ARROW,           KC_ESC,        KC_ENT
 ),
 
 [L_SYM] = LAYOUT_ergodox(
@@ -79,6 +68,29 @@ LT(L_SYM, KC_QUOT) ,KC_A           ,KC_S           ,KC_D           ,KC_F        
     _______        ,XXXXXXX         ,XXXXXXX         ,XXXXXXX         ,XXXXXXX         ,XXXXXXX        ,XXXXXXX,
                     XXXXXXX         ,KC_LEFT         ,KC_DOWN         ,KC_UP           ,KC_RIGHT       ,XXXXXXX,
     _______        ,XXXXXXX         ,XXXXXXX         ,XXXXXXX         ,XXXXXXX         ,XXXXXXX        ,XXXXXXX,
+                                     _______         ,_______         ,_______         ,_______        ,TO(L_BASE),
+    // right thumb -------------------------------------------------------------------------------------------------
+    _______,        _______,
+    _______,
+    _______,        _______,        _______
+),
+
+[L_ONE] = LAYOUT_ergodox(
+    // left hand ---------------------------------------------------------------------------------------------------
+    _______        ,_______        ,_______        ,_______        ,_______        ,_______        ,_______,
+    _______        ,_______        ,_______        ,_______        ,_______        ,_______        ,_______        ,
+    _______        ,_______        ,_______        ,_______        ,_______        ,KX_GOLANG      ,
+    _______        ,_______        ,_______        ,_______        ,_______        ,_______        ,_______,
+    _______        ,_______        ,_______        ,_______        ,_______        ,
+    // left thumb --------------------------------------------------------------------------------------------------
+                                                                                   _______,          RESET,
+                                                                                                    _______,
+                                                                     _______,      _______,         _______,
+    // right hand --------------------------------------------------------------------------------------------------
+    _______        ,_______         ,_______         ,_______         ,_______         ,_______        ,XXXXXXX,
+    _______        ,_______         ,_______         ,_______         ,_______         ,_______        ,XXXXXXX,
+                    _______         ,KC_LEFT         ,KC_DOWN         ,KC_UP           ,KC_RIGHT       ,XXXXXXX,
+    _______        ,_______         ,_______         ,_______         ,KX_CXX_ARROW    ,_______        ,XXXXXXX,
                                      _______         ,_______         ,_______         ,_______        ,TO(L_BASE),
     // right thumb -------------------------------------------------------------------------------------------------
     _______,        _______,

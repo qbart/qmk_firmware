@@ -3,10 +3,6 @@
 #define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_TERM 200
 
-#define ONESHOT_TAP_TOGGLE 3
-
-#define RGBLIGHT_SLEEP
-
 #undef MOUSEKEY_TIME_TO_MAX
 #define MOUSEKEY_TIME_TO_MAX 50
 
@@ -25,3 +21,6 @@
 #define NO_ACTION_FUNCTION
 
 #undef RGBLIGHT_ANIMATIONS
+
+#define ONESHOT_TAP_TOGGLE 5 /* Tapping this number of times holds the key until tapped once again. */
+#define ONESHOT_TIMEOUT 5000 /* Time (in ms) before the one shot key is released */
