@@ -1,9 +1,5 @@
 #include "qbart.h"
 
-qk_tap_dance_action_t tap_dance_actions[] = {
-    [_WIN] = ACTION_TAP_DANCE_DOUBLE(KC_LGUI, LGUI(KC_TAB)),
-};
-
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [L_BASE] = LAYOUT_ergodox(
@@ -26,7 +22,7 @@ LT(L_SYM, KC_QUOT) ,KC_A           ,KC_S           ,KC_D           ,KC_F        
     // right thumb -------------------------------------------------------------------------------------------------
     KC_CAPS,        KC_BSLS,
     XXXXXXX,
-    KX_CXX_ARROW,           KC_ESC,        KC_ENT
+    XXXXXXX,           KC_ESC,        KC_ENT
 ),
 
 [L_SYM] = LAYOUT_ergodox(
@@ -83,14 +79,14 @@ LT(L_SYM, KC_QUOT) ,KC_A           ,KC_S           ,KC_D           ,KC_F        
     _______        ,_______        ,_______        ,_______        ,_______        ,_______        ,_______,
     _______        ,_______        ,_______        ,_______        ,_______        ,
     // left thumb --------------------------------------------------------------------------------------------------
-                                                                                   _______,          RESET,
+                                                                                   _______,         _______,
                                                                                                     _______,
                                                                      _______,      _______,         _______,
     // right hand --------------------------------------------------------------------------------------------------
     _______        ,_______         ,_______         ,_______         ,_______         ,_______        ,XXXXXXX,
     _______        ,_______         ,_______         ,_______         ,_______         ,_______        ,XXXXXXX,
-                    _______         ,KC_LEFT         ,KC_DOWN         ,KC_UP           ,KC_RIGHT       ,XXXXXXX,
-    _______        ,_______         ,_______         ,_______         ,KX_CXX_ARROW    ,_______        ,XXXXXXX,
+                    _______         ,KC_LEFT         ,KC_DOWN         ,KC_UP           ,KC_RIGHT       ,KX_GO_ASSIGN,
+    _______        ,_______         ,_______         ,KX_GO_CHAN      ,KX_CXX_ARROW    ,_______        ,XXXXXXX,
                                      _______         ,_______         ,_______         ,_______        ,TO(L_BASE),
     // right thumb -------------------------------------------------------------------------------------------------
     _______,        _______,
