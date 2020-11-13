@@ -12,7 +12,7 @@ LT(L_SYM, KC_QUOT) ,KC_A           ,KC_S           ,KC_D           ,KC_F        
     // left thumb --------------------------------------------------------------------------------------------------
                                                                                    KC_DEL,          KC_F5,
                                                                                                     SGUI(KC_V),
-                                                                    KC_SPC,      TD(_WIN),          KC_ESC,
+                                                                    KC_SPC,      TD(_WIN),          LGUI(KC_EQL),
     // right hand --------------------------------------------------------------------------------------------------
     KC_AT          ,KC_6           ,KC_7           ,KC_8           ,KC_9           ,KC_0           ,KC_BSPC,
     KC_RCBR        ,KC_Y           ,KC_U           ,KC_I           ,KC_O           ,KC_P           ,KC_ASTR,
