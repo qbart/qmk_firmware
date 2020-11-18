@@ -53,7 +53,7 @@ LT(L_SYM, KC_QUOT) ,KC_A           ,KC_S           ,KC_D           ,KC_F        
     _______        ,_______        ,_______        ,_______        ,_______        ,_______        ,_______,
     XXXXXXX        ,XXXXXXX        ,KC_WH_D        ,KC_MS_U        ,KC_WH_U        ,XXXXXXX        ,_______        ,
     XXXXXXX        ,KC_WH_L        ,KC_MS_L        ,KC_MS_D        ,KC_MS_R        ,KC_WH_R        ,
-    XXXXXXX        ,XXXXXXX        ,XXXXXXX        ,XXXXXXX        ,XXXXXXX        ,XXXXXXX        ,_______,
+    XXXXXXX        ,KC_LEFT        ,KC_DOWN        ,KC_UP          ,KC_RIGHT       ,XXXXXXX        ,_______,
     XXXXXXX        ,XXXXXXX        ,XXXXXXX        ,XXXXXXX        ,XXXXXXX        ,
     // left thumb --------------------------------------------------------------------------------------------------
                                                                                    _______,         _______,
